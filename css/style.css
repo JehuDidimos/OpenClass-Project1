@@ -202,7 +202,7 @@ body {
     place-items: center;
 }
 
-.info-icon svg{
+.info-icon i{
   grid-area: 1 / 1;
   margin-right: 10px;
 }
@@ -224,6 +224,31 @@ body {
 /****** Accommodation ***********/
 .accommodation {
     width: 65%;
+    height: fit-content;
+}
+
+.accommodation-cards-section{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.accommodation-card{
+    background-color: #FFFFFF;
+    width: 250px;
+    height: 207px;
+    border-radius: 20px;
+}
+
+.accommodation-title{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.show-more{
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /****** Popular ***********/

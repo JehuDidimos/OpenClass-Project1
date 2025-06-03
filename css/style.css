@@ -44,6 +44,7 @@ body {
 
 .card-title {
     font-size: 16px;
+    margin: 0;
 }
 
 .euro {
@@ -88,6 +89,7 @@ body {
 .menu-accomadation:hover{
     border-top: solid #0065FC;
     color: #0065FC;
+    cursor: pointer;
 }
 
 .menu-toDo{
@@ -99,6 +101,7 @@ body {
 .menu-toDo:hover{
     border-top: solid #0065FC;
     color: #0065FC;
+    cursor: pointer;
 }
 
 /* Search */
@@ -239,11 +242,39 @@ body {
     width: 250px;
     height: 207px;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 3px 15px #0000001A;
+
 }
 
-.accommodation-title{
+.accommodation-card img {
+    box-sizing: border-box;
+    width: 250px;
+    height: 124px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 5px solid white
+}
+
+.hotel-content{
+    margin: 0px 15px 15px 15px;
+}
+
+.hotel-name{
+    margin: 0px;
+    font-size: 16px;
     font-weight: 700;
-    font-size: 22px;
+}
+
+.hotel-price{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 8px 0px;
+}
+
+.hotel-price span{
+    font-weight: 700;
 }
 
 .show-more{
@@ -295,3 +326,61 @@ body {
 .popular-cards .card-rating {
     margin-bottom: 5px;
 }
+
+/* Things To Do */
+.things-todo{
+    margin: 35px 0px;
+}
+
+.things-todo h2{
+    margin: 30px 0px;
+}
+
+.todo-cards-section{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 30px;
+    margin: 30px;
+}
+
+.todo-card{
+    width: 297px;
+    height: 439px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px #0000001A;
+}
+
+.todo-card img{
+    display: block;
+    width: 297px;
+    height: 380px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+}
+
+.todo-card h3{
+    margin: 20px;
+}
+
+/* Footer */
+
+.footer-container{
+    background-color: #F2F2F2;
+    height: 163px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 0px;
+}
+
+.footer-details{
+    margin: 20px;
+}
+
+.footer-details h3, p{
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+

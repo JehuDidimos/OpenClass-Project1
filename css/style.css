@@ -281,7 +281,7 @@ body {
 @media (max-width: 845px){
     .filter-button-wrapper{
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px 10px;
         width: 100%;
     }
@@ -297,11 +297,12 @@ body {
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
     display: flex;
-    justify-content: space-between;
+    gap: 50px 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .accommodation-and-popular section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -309,20 +310,23 @@ body {
 
 /****** Accommodation ***********/
 .accommodation {
-    width: 65%;
+    background-color: var(--main-bg-color);
+    flex-basis: 65%;
     height: fit-content;
+    flex-grow: 1;
 }
 
 .accommodation-cards-section{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 30px;
+    padding: 0;
 }
 
 .accommodation-card{
     background-color: #FFFFFF;
-    width: 250px;
+    max-width: 100%;
     height: 207px;
     border-radius: 20px;
     overflow: hidden;
@@ -331,8 +335,9 @@ body {
 }
 
 .accommodation-card img {
+    display: block;
     box-sizing: border-box;
-    width: 250px;
+    width: 100%;
     height: 124px;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -365,9 +370,26 @@ body {
     font-weight: 700;
 }
 
+@media (max-width: 375px){
+    .accommodation{
+        background-color: transparent;
+    }
+
+    .accommodation-and-popular{
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media (max-width: 1024px){
+    .accommodation-cards-section{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
 /****** Popular ***********/
 .popular {
-    width: 32%;
+    max-width: 32%;
+    background-color: var(--main-bg-color);
 }
 
 .popular-title {
@@ -410,6 +432,36 @@ body {
     margin-bottom: 5px;
 }
 
+@media (max-width: 1439px){
+    .popular{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        flex-grow: 1;
+    }
+
+    .popular-title{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .popular-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        column-gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
+
+
+
 /* Things To Do */
 .things-todo{
     margin: 35px 0px;
@@ -421,14 +473,14 @@ body {
 
 .todo-cards-section{
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     margin: 30px;
 }
 
 .todo-card{
-    width: 297px;
-    height: 439px;
+    width: 100%;
+    max-height: 439px;
     background-color: #FFFFFF;
     border-radius: 20px;
     box-shadow: 0px 3px 15px #0000001A;
@@ -436,7 +488,7 @@ body {
 
 .todo-card img{
     display: block;
-    width: 297px;
+    width: 100%;
     height: 380px;
     object-fit: cover;
     border-top-left-radius: 20px;

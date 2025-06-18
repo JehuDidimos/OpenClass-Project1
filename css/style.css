@@ -529,6 +529,10 @@ body {
     margin: 20px;
 }
 
+.footer-details p{
+    cursor: pointer;
+}
+
 .footer-details h3, .footer-details p{
     margin-bottom: 15px;
     margin-top: 0px;

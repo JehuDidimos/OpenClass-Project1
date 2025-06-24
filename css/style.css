@@ -63,6 +63,7 @@ body {
     justify-content:space-between;
     align-items: flex-start;
     min-height: 79px;
+    
 }
 
 .img-wrapper{
@@ -86,6 +87,7 @@ body {
 .menu-accomadation{
     font-size: 16px;
     padding-top: 10px;
+    transition: .08s;
 }
 
 
@@ -93,7 +95,7 @@ body {
 .menu-toDo{
     font-size: 16px;
     padding-top: 10px;
-
+    transition: .08s;
 }
 
 @media (min-width: 768px){
@@ -126,6 +128,7 @@ body {
         width: 100%;
         border-bottom: solid #F2F2F2;
         padding: 10px;
+        
     }
 
     .menu-accomadation:hover{
@@ -138,6 +141,7 @@ body {
         width: 100%;
         border-bottom: solid #F2F2F2;
         padding: 10px;
+
     }
 
     .menu-toDo:hover{
@@ -255,6 +259,8 @@ body {
     font-weight: 700;
     padding: 1px 10px;
     min-height: 50px;
+    cursor: pointer;
+    transition:background-color .4s;
 }
 
 .filter-button:hover{

@@ -193,13 +193,17 @@ body {
     font-weight: 700;
     font-size: 18px;
     border-radius: 0 15px 15px 0;
+}
 
+.search-button i{
+    display: none;
 }
 
 .search-icon{
     border: none;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
+    min-width: 49px;
 }
 
 .search-field{
@@ -298,6 +302,27 @@ body {
     }
 }
 
+@media (width <= 400px){
+    .search-button{
+        border-radius: 15px;
+        min-width: 49px;
+        box-shadow: 0px 4px 4px #00000040;;
+    }
+
+    .search-button p{
+        display: none;
+    }
+
+    .search-button i{
+        display: block;
+        margin: 16px;
+    }
+
+    .search-bar{
+        grid-template-columns: .75fr 3fr 1fr;
+    }
+}
+
 
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
@@ -382,6 +407,10 @@ body {
 
     .accommodation-and-popular{
         flex-wrap: wrap-reverse;
+    }
+
+    .accommodation-and-popular section{
+        border-radius: 0;
     }
 }
 
